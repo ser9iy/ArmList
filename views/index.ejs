@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MY APP</title>
+  <title>Облік</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -13,7 +13,13 @@
 
 
 
-
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-6 ">
+  <h4>Дані по закладах </h4>
+</div>
+<div class="col-md-3"><a href="/logout" class="btn btn-info " >Вихід</a></div>
+</div>
 
 
 
@@ -28,7 +34,7 @@
       <th>#</th>
       <th>Магазин</th>
       <th>Цифeрка</th>
-    
+       <th>Час оновлення</th>
     </tr>
   </thead>
   <tbody>
@@ -39,7 +45,7 @@
       <th scope="row"><%= i+1 %></th>
       <td><%= quotes[i].name %></td>
       <td><%= quotes[i].quote %></td>
-     
+      <td><%= quotes[i].time %></td>
     </tr>
       <% } %>
   </tbody>
@@ -54,10 +60,12 @@
 </div>
 </div>
  <hr>
-      <footer class="footer">
-        <p>&copy; Unl 2017</p>
+ <div class="row justify-content-md-center">
+      <footer class="footer centered">
+        <p>&copy; Ternopil 2017</p>
       </footer>
 
+    </div>
     </div>
     
 
