@@ -25,9 +25,9 @@
   <div class="bounce4"></div>
 </div></div>
 <div class="col-md-3"><div class="btn-group" role="group" aria-label="Basic example">
-  <!--<a href="/chort" class="btn btn-primary " >Район</a>-->
-  <a href="/dashboard" class="btn btn-success " >Оновити</a>
-  <a href="/logout" class="btn btn-info " >Вихід</a></div></div>
+    <a href="/dashboard" class="btn btn-primary " >Місто</a>
+    <a href="/chort" class="btn btn-success " >Оновити</a>
+    <a href="/logout" class="btn btn-info " >Вихід</a></div></div>
 </div>
 
 
@@ -53,19 +53,8 @@
      
       <th scope="row"><%= i+1 %></th>
       <td><%= quotes[i].name %></td>
-     
-      <% if (quotes[i].quote.indexOf("+") !== -1    ) { %>
-        <td style="font-weight: bold;background-color:cornflowerblue;"><%= quotes[i].quote %></td>
-      <% } %>
-       <% if (quotes[i].quote.indexOf("-") !== -1    ) { %>
-        <td style="font-weight: bold;background-color:lightcoral;"><%= quotes[i].quote %></td>
-      <% } %>
-
-
-
-      <td style="text-align:right;"><%= 
-        
-        quotes[i].time %></td>
+      <td style="font-weight: bold;background-color:cornflowerblue;"><%= quotes[i].quote %></td>
+      <td style="text-align:right;"><%= quotes[i].time %></td>
     </tr>
       <% } %>
   </tbody>
@@ -92,4 +81,4 @@
    <script src="main.js"></script>
 
 </body>
-</html>
+</html

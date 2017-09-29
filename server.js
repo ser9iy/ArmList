@@ -121,6 +121,12 @@ app.get('/dashboard',require('connect-ensure-login').ensureLoggedIn(), (req, res
     res.render('index.ejs', {quotes: result})
   })
 })
+app.get('/chort',require('connect-ensure-login').ensureLoggedIn(), (req, res) => {
+  db.collection('quotes').find({ name: { $in: [ "Перемоги 4б","Мазепи 28" ] } }).toArray((err, result) => {
+    if (err) return console.log(err)
+    res.render('chort.ejs', {quotes: result})
+  })
+})
 
 app.post('/quotes', (req, res) => {
   db.collection('quotes').save(req.body, (err, result) => {
